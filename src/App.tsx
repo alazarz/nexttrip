@@ -1,7 +1,8 @@
 import React, { FC } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { AppBar, Typography, TextField, Grid, Button } from '@material-ui/core'
+import { AppBar, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
+import { Layout } from './components/Layout/Layout'
 
 const useStyles: Function = makeStyles(() => ({
     header: {},
@@ -18,9 +19,11 @@ export const App: FC = () => {
                 </Typography>
                 {/* TODO Insert Metro Transit Icon here */}
             </AppBar>
-            <Routes>
-                <Route path='/' />
-            </Routes>
+            <Layout title='Departures'>
+                <Routes>
+                    <Route path='/' />
+                </Routes>
+            </Layout>
         </BrowserRouter>
     )
 }
