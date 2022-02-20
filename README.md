@@ -13,6 +13,9 @@ This project was boostrapped with the Vue CLI and leverages Jest and Cypress for
 
 
 ## Assumptions
+- This application is primarily used on a mobile device, therefore a mobile-first design/layout should be implemented.
+- This application will not used outside of Minneapolis, MN, meaning localization strings
+are not important.
 
 
 ## Potential Future Enhancements
