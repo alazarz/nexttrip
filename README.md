@@ -1,6 +1,6 @@
 # NextTrip Case Study
 
-This project was boostrapped with the Vue CLI and leverages Jest and Cypress for testing.
+This project was boostrapped with the Create React App and leverages Jest and Cypress for testing.
 
 [NextTrip API Documentation](https://svc.metrotransit.org/nextrip)
 
