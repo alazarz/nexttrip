@@ -1,4 +1,4 @@
-// Interfaces to encapsulate API entities
+// Interfaces to encapsulate API response entities
 // These interfaces map directly to the schemas specified in the NextTrip Swagger docs.
 export interface Route {
     route_id: string,

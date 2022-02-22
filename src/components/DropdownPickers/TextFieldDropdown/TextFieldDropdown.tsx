@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC } from 'react'
+import React, { ChangeEvent, FC, useState } from 'react'
 import { MenuItem, TextField, TextFieldProps }  from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 
@@ -28,8 +28,11 @@ export const TextFieldDropdown: FC<TextFieldDropdownProps> = ({
 }) => {
     const styles = useStyles()
 
+    const [selected, setSelected] = useState<string>('')
+
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
         onSelect(e.target.value)
+        setSelected(e.target.value)
     }
 
     return (
@@ -37,12 +40,13 @@ export const TextFieldDropdown: FC<TextFieldDropdownProps> = ({
             key={id}
             className={styles.dropdown}
             select
+            value={selected}
             fullWidth
             id={id}
             label={title}
             onChange={handleChange}>
                 {options.map(option => (
-                    <MenuItem value={option.id}>{option.label}</MenuItem>
+                    <MenuItem key={option.id} value={option.id}>{option.label}</MenuItem>
                 ))}
             </TextField>
     )
