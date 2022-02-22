@@ -3,9 +3,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { AppBar, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Layout } from './components/Layout/Layout'
+import { DropdownPickers } from './components/DropdownPickers'
 
 const useStyles: Function = makeStyles(() => ({
-    header: {},
+    header: {
+        backgroundColor: '#cc262c',
+        alignItems: 'center'
+    },
     title: {},
 }))
 
@@ -19,11 +23,12 @@ export const App: FC = () => {
                 </Typography>
                 {/* TODO Insert Metro Transit Icon here */}
             </AppBar>
-            <Layout title='Departures'>
+            <Layout>
                 <Routes>
-                    <Route path='/' />
+                    <Route path='/' element={<DropdownPickers />}>
+                    </Route>
                 </Routes>
-            </Layout>
+            </Layout> 
         </BrowserRouter>
     )
 }

@@ -22,5 +22,6 @@ are not important.
 
 
 
-## Random Notes
-- Initially thought of using Material UI 5 with a custom hook to replace makeStyles (useClasses or something like that) but that didn't pan out too well.
+## Random notes taken during the development of this project.
+- Initially thought of using Material UI 5 with a custom hook that uses emotion library's css() to replace makeStyles (denoted useClasses or something like that).
+- There was a small learning curve with using the latest version of React Router.

@@ -1,5 +1,4 @@
-import axios, { AxiosResponse } from 'axios'
-import { TypeFlags } from 'typescript'
+import axios from 'axios'
 import { Route, Direction, Stop, Departure } from '../types/index'
 
 const baseUrl: string = 'https://svc.metrotransit.org/nextripv2'
