@@ -6,13 +6,6 @@ export interface Route {
     route_label: string
 }
 
-export interface Stop {
-    stop_id: number,
-    latitude: number,
-    longitude: number,
-    description?: string
-}
-
 export interface Direction {
     direction_id: number,
     direction_name: string
@@ -33,3 +26,13 @@ export interface Departure {
     schedule_relationship: string,
 }
 
+export interface Stop {
+    place_code: string,
+    description: string,
+}
+
+// For UI Components
+export interface TextFieldDropdownOption {
+    id: string,
+    label: string
+}

@@ -1,11 +1,7 @@
 import React, { ChangeEvent, FC, useState } from 'react'
 import { MenuItem, TextField, TextFieldProps }  from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
-
-interface TextFieldDropdownOption {
-    id: string,
-    label: string
-}
+import { TextFieldDropdownOption } from '../../../types/'
 
 interface TextFieldDropdownProps {
     id: string,
@@ -31,8 +27,8 @@ export const TextFieldDropdown: FC<TextFieldDropdownProps> = ({
     const [selected, setSelected] = useState<string>('')
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-        onSelect(e.target.value)
         setSelected(e.target.value)
+        onSelect(e.target.value)
     }
 
     return (

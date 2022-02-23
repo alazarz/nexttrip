@@ -15,13 +15,13 @@ export const getDirections = async (routeId: string): Promise<Direction[]> => {
     .catch(error => error)
 }
 
-export const getStops = async (routeId: string, directionId: number): Promise<Stop[]> => {
+export const getStops = async (routeId: string, directionId: string): Promise<Stop[]> => {
     return await axios.get<Stop[]>(`${baseUrl}/stops/${routeId}/${directionId}`)
     .then(response => response.data)
     .catch(error => error)
 }
 
-export const getDepartures = async (routeId: string, directionId: number, stopId: number): Promise<Departure[]> => {
+export const getDepartures = async (routeId: string, directionId: string, stopId: string): Promise<Departure[]> => {
     return await axios.get<Departure[]>(`${baseUrl}/stops/${routeId}/${directionId}/${stopId}`)
     .then(response => response.data)
     .catch(error => error)

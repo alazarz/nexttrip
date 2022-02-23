@@ -8,7 +8,8 @@ import { DropdownPickers } from './components/DropdownPickers'
 const useStyles: Function = makeStyles(() => ({
     header: {
         backgroundColor: '#cc262c',
-        alignItems: 'center'
+        alignItems: 'center',
+        marginBottom: '10px',
     },
     title: {},
 }))
@@ -23,12 +24,19 @@ export const App: FC = () => {
                 </Typography>
                 {/* TODO Insert Metro Transit Icon here */}
             </AppBar>
-            <Layout>
+            <Routes>
+                <Route path='/' element={<Layout children={<DropdownPickers />} />}>
+                    <Route path=':routeId'  element={<DropdownPickers />} />
+                    <Route path=':routeId/:directionId/'  element={<DropdownPickers />} />
+                    <Route path=':routeId/:directionId/:stopId'  element={<DropdownPickers />} />
+
+                </Route>
+            </Routes>
+            {/* <Layout>
                 <Routes>
-                    <Route path='/' element={<DropdownPickers />}>
-                    </Route>
+                    
                 </Routes>
-            </Layout> 
+            </Layout>  */}
         </BrowserRouter>
     )
 }
