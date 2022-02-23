@@ -8,6 +8,7 @@ This project was boostrapped with the Create React App.
 - [Typesript 4.4.2](https://www.typescriptlang.org/)
 - [Material UI v4]()
 - [React hooks](https://reactjs.org/docs/hooks-intro.html)
+- [React Router 6](https://reactrouter.com/docs/en/v6/upgrading/v5)
 - [Axios Http Library](https://axios-http.com/docs/intro)
 
 
