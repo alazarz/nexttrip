@@ -7,7 +7,8 @@ interface TextFieldDropdownProps {
     id: string,
     title: string,
     onSelect: (selected: string) => void,
-    options: TextFieldDropdownOption[]
+    options: TextFieldDropdownOption[],
+    hidden: boolean
 }
 
 const useStyles = makeStyles(() => ({
@@ -20,7 +21,8 @@ export const TextFieldDropdown: FC<TextFieldDropdownProps> = ({
     id,
     title,
     onSelect,
-    options
+    options,
+    hidden
 }) => {
     const styles = useStyles()
 
@@ -40,6 +42,7 @@ export const TextFieldDropdown: FC<TextFieldDropdownProps> = ({
             fullWidth
             id={id}
             label={title}
+            hidden={hidden}
             onChange={handleChange}>
                 {options.map(option => (
                     <MenuItem key={option.id} value={option.id}>{option.label}</MenuItem>

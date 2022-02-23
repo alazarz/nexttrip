@@ -26,9 +26,27 @@ export interface Departure {
     schedule_relationship: string,
 }
 
-export interface Stop {
+export interface Place {
     place_code: string,
     description: string,
+}
+
+export interface Stop {
+    stop_id: number,
+    latitude: number,
+    longitude: number,
+    description: string
+}
+
+export interface Alert {
+    stop_closed: boolean,
+    alert_text: string
+}
+
+export interface DepartureData {
+    stops: Stop[],
+    alerts: Alert[],
+    departures: Departure[]
 }
 
 // For UI Components

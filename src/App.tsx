@@ -4,6 +4,7 @@ import { AppBar, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Layout } from './components/Layout/Layout'
 import { DropdownPickers } from './components/DropdownPickers'
+import { StopsTable } from './components/DeparturesTable/StopsTable'
 
 const useStyles: Function = makeStyles(() => ({
     header: {
@@ -25,18 +26,9 @@ export const App: FC = () => {
                 {/* TODO Insert Metro Transit Icon here */}
             </AppBar>
             <Routes>
-                <Route path='/' element={<Layout children={<DropdownPickers />} />}>
-                    <Route path=':routeId'  element={<DropdownPickers />} />
-                    <Route path=':routeId/:directionId/'  element={<DropdownPickers />} />
-                    <Route path=':routeId/:directionId/:stopId'  element={<DropdownPickers />} />
-
-                </Route>
+                <Route path='/' element={<Layout children={<DropdownPickers />} />} />
+                <Route path='/:routeId/:directionId/' element={<Layout children={<StopsTable />} />} />
             </Routes>
-            {/* <Layout>
-                <Routes>
-                    
-                </Routes>
-            </Layout>  */}
         </BrowserRouter>
     )
 }
