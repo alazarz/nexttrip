@@ -2,7 +2,6 @@ import { FC, useEffect, useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { Stop } from '../../types'
 import { getDepartureData, getStops } from '../../api'
-import { makeStyles } from '@material-ui/core/styles'
 import { TableContainer, Table, TableBody, TableHead, TableRow, TableCell } from '@material-ui/core'
 
 export const StopsTable: FC = () => {
@@ -48,7 +47,6 @@ export const StopsTable: FC = () => {
                         <TableRow key={s.stop_id}>
                             <TableCell key={s.stop_id}>{s.stop_id}</TableCell>
                             <TableCell key={s.description}>{s.description}</TableCell> 
-                            {/* TODO add 'Find in Maps' button */}
                         </TableRow>
                     ))}
                 </TableBody>

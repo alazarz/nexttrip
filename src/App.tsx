@@ -23,7 +23,6 @@ export const App: FC = () => {
                 <Typography variant='h3' className={styles.title}>
                     Metro Transit NextTrip
                 </Typography>
-                {/* TODO Insert Metro Transit Icon here */}
             </AppBar>
             <Routes>
                 <Route path='/' element={<Layout children={<DropdownPickers />} />} />
