@@ -56,8 +56,8 @@ export const StopsTable: FC = () => {
             </TableContainer>
             :
             <div>
-                {/* TODO use a better component for this */}
-                ERROR RETREIVING STOP INFORMATION
+                {/* TODO use CircularProgress component instead */}
+                Loading Stops.....
             </div>
         }
         </>

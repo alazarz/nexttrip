@@ -10,7 +10,7 @@ const useStyles: Function = makeStyles(() => ({
     header: {
         backgroundColor: '#cc262c',
         alignItems: 'center',
-        marginBottom: '10px',
+        marginBottom: '20px',
     },
     title: {},
 }))
