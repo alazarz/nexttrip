@@ -4,7 +4,7 @@ import { AppBar, Typography } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import { Layout } from './components/Layout/Layout'
 import { DropdownPickers } from './components/DropdownPickers'
-import { StopsTable } from './components/DeparturesTable/StopsTable'
+import { StopsTable } from './components/StopsTable/StopsTable'
 
 const useStyles: Function = makeStyles(() => ({
     header: {
